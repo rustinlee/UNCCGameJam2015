@@ -5,7 +5,7 @@ namespace UnityStandardAssets._2D
 {
     public class Camera2DFollow : MonoBehaviour
     {
-        public Transform target;
+        //public Transform target;
         public float damping = 1;
         public float lookAheadFactor = 3;
         public float lookAheadReturnSpeed = 0.5f;
@@ -15,10 +15,14 @@ namespace UnityStandardAssets._2D
         private Vector3 m_LastTargetPosition;
         private Vector3 m_CurrentVelocity;
         private Vector3 m_LookAheadPos;
+        private Transform target;
+        private PlayerInput playerInput;
 
         // Use this for initialization
         private void Start()
         {
+            target = GameObject.FindGameObjectWithTag("Player").transform;
+            playerInput = target.gameObject.GetComponent<PlayerInput>();
             m_LastTargetPosition = target.position;
             m_OffsetZ = (transform.position - target.position).z;
             transform.parent = null;
@@ -26,10 +30,14 @@ namespace UnityStandardAssets._2D
 
 
         // Update is called once per frame
-        private void Update()
-        {
+        private void Update() {
             // only update lookahead pos if accelerating or changed direction
-            float xMoveDelta = (target.position - m_LastTargetPosition).x;
+            float xMoveDelta;
+            if (playerInput.isFacingLeft()) {
+                xMoveDelta = (target.position + m_LastTargetPosition).x;
+            } else {
+                xMoveDelta = (target.position - m_LastTargetPosition * 2).x;
+            }
 
             bool updateLookAheadTarget = Mathf.Abs(xMoveDelta) > lookAheadMoveThreshold;
 
