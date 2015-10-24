@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: b78d7b03f0d03744aa16a51eeef1f846
-timeCreated: 1445708772
+timeCreated: 1445719006
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -97,12 +97,12 @@ TextureImporter:
     - name: Hand_L
       rect:
         serializedVersion: 2
-        x: 1044
-        y: 1399
+        x: 1030
+        y: 1401
         width: 160
         height: 61
       alignment: 9
-      pivot: {x: .835923791, y: .576618135}
+      pivot: {x: .131333917, y: .522659063}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Hand_R
       rect:
@@ -162,7 +162,7 @@ TextureImporter:
         width: 229
         height: 85
       alignment: 9
-      pivot: {x: .820816219, y: .521081567}
+      pivot: {x: .099661611, y: .509448946}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Flashlight_R
       rect:

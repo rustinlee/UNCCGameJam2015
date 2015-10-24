@@ -1,10 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerInput : MonoBehaviour {
     public float walkSpeed = 20f;
+    public List<Transform> flippySprites;
 
+    //private List<SwapSprite> swapSprites;
+    private SwapSprite[] swapSprites;
     private bool facingLeft;
+    private bool lastFrame_facingLeft;
     private Transform upperArm;
     private Transform flashlight;
     private Rigidbody2D rigid2D;
@@ -14,7 +19,19 @@ public class PlayerInput : MonoBehaviour {
     }
 
 	void Start() {
-        facingLeft = true;
+        /*
+        foreach (Transform t in flippySprites) {
+            Debug.Log(t);
+            Debug.Log(t.gameObject);
+            Debug.Log(t.gameObject.GetComponent<>)
+            swapSprites.Add(t.gameObject.GetComponent<SwapSprite>());
+            
+        }
+        */
+
+        swapSprites = GetComponentsInChildren<SwapSprite>();
+        facingLeft = false;
+        lastFrame_facingLeft = false;
         upperArm = GameObject.FindGameObjectWithTag("PivotArm").transform;
         flashlight = GameObject.FindGameObjectWithTag("Flashlight").transform;
         rigid2D = GetComponent<Rigidbody2D>();
@@ -54,7 +71,19 @@ public class PlayerInput : MonoBehaviour {
             upperArm.localScale = new Vector3(1f, 1f, 1f);
         }
 
-        Debug.Log(vectorToTarget);
+        if (facingLeft != lastFrame_facingLeft) {
+            if (facingLeft) {
+                foreach (SwapSprite s in swapSprites) {
+                    s.SetLeft();
+                }
+            } else {
+                foreach (SwapSprite s in swapSprites) {
+                    s.SetRight();
+                }
+            }
+        }
+
+        lastFrame_facingLeft = facingLeft;
         //transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime);
     }
 
