@@ -1,0 +1,155 @@
+fileFormatVersion: 2
+guid: f7202cf94cc47ba4c90f561a7ea996c5
+timeCreated: 1445642727
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Head
+    21300002: Torso
+    21300004: Thigh
+    21300006: UpperArm
+    21300008: LowerArm
+    21300010: Hand
+    21300012: Flashlight
+    21300014: Leg
+    21300016: Foot
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Head
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 397
+        width: 89
+        height: 90
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Torso
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 195
+        width: 91
+        height: 195
+      alignment: 9
+      pivot: {x: .490216613, y: .54565537}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Thigh
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 17
+        width: 68
+        height: 163
+      alignment: 9
+      pivot: {x: .395261079, y: .882328808}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: UpperArm
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 277
+        width: 50
+        height: 109
+      alignment: 9
+      pivot: {x: .410971999, y: .818540514}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LowerArm
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 264
+        width: 86
+        height: 44
+      alignment: 9
+      pivot: {x: .168732926, y: .47976616}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Hand
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 299
+        width: 41
+        height: 42
+      alignment: 9
+      pivot: {x: .326286495, y: .457605988}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Flashlight
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 196
+        width: 84
+        height: 64
+      alignment: 9
+      pivot: {x: .224437162, y: .444357634}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Leg
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 37
+        width: 64
+        height: 134
+      alignment: 9
+      pivot: {x: .708659172, y: .785686791}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Foot
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 23
+        width: 80
+        height: 44
+      alignment: 9
+      pivot: {x: .188401982, y: .479766399}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
