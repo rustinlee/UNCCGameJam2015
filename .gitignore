@@ -13,6 +13,10 @@
 /*.pidb
 /*.booproj
 
+# Standard assets
+Assets/Standard Assets
+Editor
+
 #Unity3D Generated File On Crash Reports
 sysinfo.txt
 
