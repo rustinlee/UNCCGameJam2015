@@ -9,6 +9,10 @@ public class PlayerInput : MonoBehaviour {
     private Transform flashlight;
     private Rigidbody2D rigid2D;
 
+    public bool isFacingLeft() {
+        return facingLeft;
+    }
+
 	void Start() {
         facingLeft = true;
         upperArm = GameObject.FindGameObjectWithTag("PivotArm").transform;
@@ -22,7 +26,6 @@ public class PlayerInput : MonoBehaviour {
         Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
         if (vectorToTarget.x < 0) {
             facingLeft = true;
-            //transform.localScale = new Vector3(-1f, 1f, 1f);
             transform.rotation = Quaternion.Euler(
                 transform.rotation.eulerAngles.x,
                 -180f,
@@ -35,7 +38,6 @@ public class PlayerInput : MonoBehaviour {
                 0f,
                 transform.rotation.eulerAngles.z
             );
-            //transform.localScale = new Vector3(1f, 1f, 1f);
         }
 
         upperArm.localRotation = q;
@@ -48,7 +50,6 @@ public class PlayerInput : MonoBehaviour {
                 upperArm.localRotation.w
             );
             upperArm.localScale = new Vector3(-1f, -1f, 1f);
-                
         } else {
             upperArm.localScale = new Vector3(1f, 1f, 1f);
         }
