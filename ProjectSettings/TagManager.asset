@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PivotArm
   - Flashlight
+  - AmbientSound
   layers:
   - Default
   - TransparentFX
