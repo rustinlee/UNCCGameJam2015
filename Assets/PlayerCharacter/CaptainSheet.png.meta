@@ -1,0 +1,210 @@
+fileFormatVersion: 2
+guid: b78d7b03f0d03744aa16a51eeef1f846
+timeCreated: 1445708772
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: UrineCoat
+    21300002: Head_L
+    21300004: Head_R
+    21300006: Hand_L
+    21300008: Hand_R
+    21300010: LowerArm
+    21300012: Thigh
+    21300014: UpperArm
+    21300016: LowerLeg
+    21300018: Flashlight_L
+    21300020: Flashlight_R
+    21300022: Torso
+    21300024: Foot
+    21300026: Neck
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 250
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: UrineCoat
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 1094
+        width: 336
+        height: 594
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Head_L
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 1551
+        width: 184
+        height: 193
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Head_R
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 1319
+        width: 182
+        height: 191
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Hand_L
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 1399
+        width: 160
+        height: 61
+      alignment: 9
+      pivot: {x: .835923791, y: .576618135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Hand_R
+      rect:
+        serializedVersion: 2
+        x: 1238
+        y: 1400
+        width: 159
+        height: 65
+      alignment: 9
+      pivot: {x: .139918685, y: .571903169}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LowerArm
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 1138
+        width: 261
+        height: 102
+      alignment: 9
+      pivot: {x: .142997652, y: .517567337}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Thigh
+      rect:
+        serializedVersion: 2
+        x: 1206
+        y: 840
+        width: 220
+        height: 502
+      alignment: 9
+      pivot: {x: .454987675, y: .897816181}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: UpperArm
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 804
+        width: 140
+        height: 296
+      alignment: 9
+      pivot: {x: .461602777, y: .778467536}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LowerLeg
+      rect:
+        serializedVersion: 2
+        x: 1198
+        y: 343
+        width: 223
+        height: 471
+      alignment: 9
+      pivot: {x: .543149412, y: .926754951}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Flashlight_L
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 663
+        width: 229
+        height: 85
+      alignment: 9
+      pivot: {x: .820816219, y: .521081567}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Flashlight_R
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 655
+        width: 229
+        height: 87
+      alignment: 9
+      pivot: {x: .155709475, y: .541193128}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Torso
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 116
+        width: 240
+        height: 450
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Foot
+      rect:
+        serializedVersion: 2
+        x: 1238
+        y: 96
+        width: 247
+        height: 189
+      alignment: 9
+      pivot: {x: .256701022, y: .808471024}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Neck
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 137
+        width: 99
+        height: 116
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

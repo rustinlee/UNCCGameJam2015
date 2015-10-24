@@ -13,7 +13,7 @@ public class SetLightPosition : MonoBehaviour {
     }
 	
 	void LateUpdate() {
-        radialLightEmitter.faceAngle = lightPoint.eulerAngles.z + 12.5f;
+        radialLightEmitter.faceAngle = lightPoint.eulerAngles.z;
         if (playerInput.isFacingLeft()) {
             Quaternion tempQuat = Quaternion.Euler(0f, 0f, radialLightEmitter.faceAngle);
             tempQuat = new Quaternion(
