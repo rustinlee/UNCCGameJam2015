@@ -8,6 +8,8 @@ TagManager:
   - Flashlight
   - AmbientSound
   - OutdoorEnvironment
+  - Pickup
+  - LockingDoor
   layers:
   - Default
   - TransparentFX

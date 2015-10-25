@@ -10,6 +10,7 @@ public class PlayerInput : MonoBehaviour {
     private bool lastFrame_facingLeft;
     private Transform upperArm;
     private Transform flashlight;
+    private Transform spotlight;
     private Rigidbody2D rigid2D;
     private Animator animator;
 
@@ -24,6 +25,7 @@ public class PlayerInput : MonoBehaviour {
         lastFrame_facingLeft = false;
         upperArm = GameObject.FindGameObjectWithTag("PivotArm").transform;
         flashlight = GameObject.FindGameObjectWithTag("Flashlight").transform;
+        spotlight = flashlight.GetChild(0).GetChild(0);
         rigid2D = GetComponent<Rigidbody2D>();
     }
 	
@@ -66,12 +68,17 @@ public class PlayerInput : MonoBehaviour {
                 foreach (SwapSprite s in swapSprites) {
                     s.SetLeft();
                 }
+                spotlight.localRotation = Quaternion.Euler(0f, 270f, 180f);
             } else {
                 foreach (SwapSprite s in swapSprites) {
                     s.SetRight();
                 }
+                spotlight.localRotation = Quaternion.Euler(0f, 90f, 0f);
             }
+
         }
+
+
 
         lastFrame_facingLeft = facingLeft;
         //transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime);
