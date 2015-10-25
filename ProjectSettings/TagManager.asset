@@ -10,6 +10,7 @@ TagManager:
   - OutdoorEnvironment
   - Pickup
   - LockingDoor
+  - LampLight
   layers:
   - Default
   - TransparentFX
