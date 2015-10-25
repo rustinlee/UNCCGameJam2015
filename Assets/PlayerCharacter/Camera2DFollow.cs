@@ -20,8 +20,7 @@ namespace UnityStandardAssets._2D
 
         public bool isIndoors = false;
         
-        private void Start()
-        {
+        private void Start() {
             target = GameObject.FindGameObjectWithTag("Player").transform;
             playerInput = target.gameObject.GetComponent<PlayerInput>();
             m_LastTargetPosition = target.position;
@@ -43,12 +42,9 @@ namespace UnityStandardAssets._2D
             //m_LookAheadPos += new Vector3(0f, Input.mousePosition, 0f);
             //Debug.Log(Input.mousePosition.y - Screen.height / 2);
             
-            if (updateLookAheadTarget)
-            {
+            if (updateLookAheadTarget) {
                 m_LookAheadPos = lookAheadFactor*Vector3.right*Mathf.Sign(xMoveDelta);
-            }
-            else
-            {
+            } else {
                 m_LookAheadPos = Vector3.MoveTowards(m_LookAheadPos, Vector3.zero, Time.deltaTime*lookAheadReturnSpeed);
             }
 
