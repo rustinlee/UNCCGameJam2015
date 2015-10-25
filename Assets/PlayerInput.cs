@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class PlayerInput : MonoBehaviour {
     public float walkSpeed = 20f;
+    public float jumpPower = 5f;
 
     private SwapSprite[] swapSprites;
     private bool facingLeft;
@@ -78,10 +79,17 @@ public class PlayerInput : MonoBehaviour {
 
         }
 
-
-
         lastFrame_facingLeft = facingLeft;
         //transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime);
+
+        Vector2 playerPos = new Vector2(transform.position.x, transform.position.y);
+        Vector2 groundPos = new Vector2(playerPos.x, playerPos.y - 3.5f);
+        bool onGround = Physics2D.Linecast(playerPos, groundPos, 1 << LayerMask.NameToLayer("LightObstacle"));
+        //Debug.DrawLine(new Vector3(playerPos.x, playerPos.y), new Vector3(groundPos.x, groundPos.y));
+        //Debug.Log(onGround);
+        if (Input.GetButtonDown("Jump") && onGround) {
+            rigid2D.AddForce(new Vector2(0f, jumpPower), ForceMode2D.Impulse);
+        }
     }
 
     void FixedUpdate() {
