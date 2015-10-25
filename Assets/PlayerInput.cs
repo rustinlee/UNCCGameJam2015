@@ -4,31 +4,21 @@ using System.Collections.Generic;
 
 public class PlayerInput : MonoBehaviour {
     public float walkSpeed = 20f;
-    public List<Transform> flippySprites;
 
-    //private List<SwapSprite> swapSprites;
     private SwapSprite[] swapSprites;
     private bool facingLeft;
     private bool lastFrame_facingLeft;
     private Transform upperArm;
     private Transform flashlight;
     private Rigidbody2D rigid2D;
+    private Animator animator;
 
     public bool isFacingLeft() {
         return facingLeft;
     }
 
 	void Start() {
-        /*
-        foreach (Transform t in flippySprites) {
-            Debug.Log(t);
-            Debug.Log(t.gameObject);
-            Debug.Log(t.gameObject.GetComponent<>)
-            swapSprites.Add(t.gameObject.GetComponent<SwapSprite>());
-            
-        }
-        */
-
+        animator = GetComponent<Animator>();
         swapSprites = GetComponentsInChildren<SwapSprite>();
         facingLeft = false;
         lastFrame_facingLeft = false;
@@ -92,6 +82,12 @@ public class PlayerInput : MonoBehaviour {
 
         if (horizInput != 0) {
             rigid2D.velocity = new Vector2(horizInput * walkSpeed, rigid2D.velocity.y);
+            if (facingLeft) {
+                animator.SetFloat("WalkingDirection", -horizInput * walkSpeed);
+                //animator.
+            } else {
+                animator.SetFloat("WalkingDirection", horizInput * walkSpeed);
+            }
         }
 	}
 }
