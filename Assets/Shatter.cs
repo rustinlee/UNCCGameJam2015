@@ -19,7 +19,7 @@ public class Shatter : MonoBehaviour
         } else if (mag > shatterForce / 2) {
             AudioSource.PlayClipAtPoint(mediumClink, transform.position);
             Debug.Log("clank");
-        } else if (mag > 1f) {
+        } else if (mag > 0.1f) {
             AudioSource.PlayClipAtPoint(smallClink, transform.position);
             Debug.Log("clink");
         }
