@@ -40,6 +40,9 @@ namespace UnityStandardAssets._2D
 
             bool updateLookAheadTarget = Mathf.Abs(xMoveDelta) > lookAheadMoveThreshold;
 
+            //m_LookAheadPos += new Vector3(0f, Input.mousePosition, 0f);
+            //Debug.Log(Input.mousePosition.y - Screen.height / 2);
+            
             if (updateLookAheadTarget)
             {
                 m_LookAheadPos = lookAheadFactor*Vector3.right*Mathf.Sign(xMoveDelta);
@@ -47,6 +50,10 @@ namespace UnityStandardAssets._2D
             else
             {
                 m_LookAheadPos = Vector3.MoveTowards(m_LookAheadPos, Vector3.zero, Time.deltaTime*lookAheadReturnSpeed);
+            }
+
+            if (Mathf.Abs(Input.mousePosition.y - Screen.height / 2) > Screen.height / 3) {
+                m_LookAheadPos += new Vector3(0f, (Input.mousePosition.y - Screen.height / 2) / 120, 0f);
             }
 
             Vector3 aheadTargetPos = target.position + m_LookAheadPos + Vector3.forward*m_OffsetZ;
