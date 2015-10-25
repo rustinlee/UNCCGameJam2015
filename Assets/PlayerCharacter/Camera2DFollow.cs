@@ -5,11 +5,11 @@ namespace UnityStandardAssets._2D
 {
     public class Camera2DFollow : MonoBehaviour
     {
-        //public Transform target;
         public float damping = 1;
         public float lookAheadFactor = 3;
         public float lookAheadReturnSpeed = 0.5f;
         public float lookAheadMoveThreshold = 0.1f;
+        public float outdoorsXClampValue = -21f;
 
         private float m_OffsetZ;
         private Vector3 m_LastTargetPosition;
@@ -18,7 +18,8 @@ namespace UnityStandardAssets._2D
         private Transform target;
         private PlayerInput playerInput;
 
-        // Use this for initialization
+        public bool isIndoors = false;
+        
         private void Start()
         {
             target = GameObject.FindGameObjectWithTag("Player").transform;
@@ -28,8 +29,6 @@ namespace UnityStandardAssets._2D
             transform.parent = null;
         }
 
-
-        // Update is called once per frame
         private void Update() {
             // only update lookahead pos if accelerating or changed direction
             float xMoveDelta;
@@ -56,6 +55,12 @@ namespace UnityStandardAssets._2D
             transform.position = newPos;
 
             m_LastTargetPosition = target.position;
+        }
+
+        private void LateUpdate() {
+            if (!isIndoors && transform.position.x < outdoorsXClampValue) {
+                transform.position = new Vector3(outdoorsXClampValue, transform.position.y, transform.position.z);
+            }
         }
     }
 }
