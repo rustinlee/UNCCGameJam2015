@@ -11,6 +11,7 @@ TagManager:
   - Pickup
   - LockingDoor
   - LampLight
+  - PickupHand
   layers:
   - Default
   - TransparentFX
