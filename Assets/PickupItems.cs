@@ -46,7 +46,12 @@ public class PickupItems : MonoBehaviour {
 			foreach (Transform child in handTransform) {
 				child.SetParent(null);
 				child.GetComponent<Rigidbody2D>().isKinematic = false;
-				child.GetComponent<Rigidbody2D>().AddForce(new Vector3(throwForce, 0f, 0f), ForceMode2D.Impulse);
+
+				Vector3 vectorToTarget = Camera.main.ScreenToWorldPoint(Input.mousePosition) - GameObject.FindGameObjectWithTag("Player").transform.position;
+				Vector2 throwDirection = new Vector2(vectorToTarget.x, vectorToTarget.y).normalized;
+
+				Vector3 throwVector = new Vector3(throwDirection.x * throwForce, throwDirection.y * throwForce, 0f);
+				child.GetComponent<Rigidbody2D>().AddForce(throwVector, ForceMode2D.Impulse);
 			}
 			isThrowing = false;
 			throwForce = 0f;
