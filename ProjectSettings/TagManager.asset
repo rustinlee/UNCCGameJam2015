@@ -12,6 +12,7 @@ TagManager:
   - LockingDoor
   - LampLight
   - PickupHand
+  - Dialogue
   layers:
   - Default
   - TransparentFX
